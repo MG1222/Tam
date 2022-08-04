@@ -1,0 +1,12 @@
+<p>admin</p>
+
+<?php var_dump($_SESSION) ?>
+
+<form method="POST" action="<?= url('/product/store') ?>" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="description" placeholder="description">
+    <input type="text" name="price" placeholder="price">
+    <input type="file" name="img" >
+    <button type="submit" value="submit">send</button>
+</form>
+

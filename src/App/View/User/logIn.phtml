@@ -1,0 +1,15 @@
+<p>Se connecter</p>
+<form method="POST" action="<?= url('/user/auth') ?>">
+
+	<input type="text" name="email" placeholder="email">
+    <?php if (flashBag()->has('email')): ?>
+        <p><?= flashBag()->get('email') ?></p>
+    <?php endif; ?>
+
+	<input type="password" name="password" placeholder="password">
+	<?php if (flashBag()->has('password')): ?>
+        <p><?= flashBag()->get('password') ?></p>
+	<?php endif; ?>
+
+	<button type="submit">Se connecter</button>
+</form>

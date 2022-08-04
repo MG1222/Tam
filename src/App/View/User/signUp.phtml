@@ -1,0 +1,16 @@
+<p>sign Up</p>
+<?php if (flashBag()->has('basketError')): ?>
+    <p><?= flashBag()->get('basketError') ?></p>
+<?php endif; ?>
+<form method="POST" action="<?= url('/user/store') ?>">
+    <input type="text" name="email" placeholder="email">
+    <?php if ( flashBag()->has('email')): ?>
+        <p><?= flashBag()->get('email') ?></p>
+    <?php endif; ?>
+    <!-- TODO: add a btn/icon for look psw -->
+    <input type="password" name="password" placeholder="password">
+    <?php if (flashBag()->has('password')): ?>
+        <p><?= flashBag()->get('password') ?></p>
+    <?php endif; ?>
+    <button type="submit">sign up</button>
+</form>

@@ -1,0 +1,38 @@
+<p>panier</p>
+<?php foreach ($baskets as $basket): ?>
+    <p>
+        <?= $basket['product_id'] ?>
+        <?= $basket['name'] ?>
+        <?= $basket['quantity'] ?>
+		<p><?= $basket['price'] ?>$</p>
+
+        <img src="<?= url('../../asset/img/products/' . $basket['img']) ?>" alt="img" width="50px" height="50px">
+
+    </p>
+
+    <form action="<?= url('/basket/deleteFromBasket') ?>" method="GET">
+        <input type="hidden" name="id" value="<?= $basket['id'] ?>">
+        <input type="submit" value="delete">
+    </form>
+
+<?php endforeach; ?>
+
+<hr>
+<p>total : <?= $totalPrice ?>$</p>
+<a href="<?= url('/') ?>">retourn</a>
+
+<form action="<?= url('/basket/checkout') ?>" method="GET">
+    <input type="submit" value="checkout">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+

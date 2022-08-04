@@ -1,0 +1,16 @@
+<p>all</p>
+
+
+    <ul>
+        <?php foreach ($products as $product): ?>
+            <li>
+                <?= $product['name'] ?>
+                <?= $product['id'] ?>
+                <?= $product['description'] ?>
+            </li>
+            <p>  <?= $product['price'] ?> € </p>
+            <img src="<?= url('../../asset/img/products/' . $product['img']) ?>" alt="img" width="50px" height="50px">
+            <a href="<?= url('/product/edit/' . $product['id']) ?>">edit</a>
+            <a href="<?= url('/product/show?id=' . $product['id']) ?>">Voir le produit</a>
+        <?php endforeach; ?>
+    </ul>

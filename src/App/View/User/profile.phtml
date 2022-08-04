@@ -1,0 +1,41 @@
+<p>profil</p>
+<?php if ($user['firstName']):?>
+    <p>Hello <?= htmlentities($user['firstName']) ?></p>
+<?php else: ?>
+    <p>Et si on complete le profile ? <?= htmlentities($user['email']) ?></p>
+    <a href="<?= url('/edit') ?>">Complete your profile</a>
+<?php endif; ?>
+
+<form action="<?= url('/user/edit') ?>" method="post">
+    <label for="firstName" >Prenom</label>
+    <input type="text" name="firstName" value="<?= htmlentities($user['firstName'] ?? 'Anonyme') ?>" />
+    <label for="lastName">Nom</label>
+    <input type="text" name="lastName" value="<?= htmlentities($user['lastName'] ?? 'Anonyme') ?>" />
+    <label for=email">Email</label>
+    <input type="text" name="email" value="<?= htmlentities($user['email'] ?? 'Anonyme') ?>" />
+    <p> Addresses : </p>
+    <label for="address">Addresse</label>
+    <input type="text" name="address" value="<?= htmlentities($user['address'] ?? 'Anonyme') ?>" />
+    <label for="city">Ville</label>
+    <input type="text" name="city" value="<?= htmlentities($user['city'] ?? 'Anonyme') ?>">
+    <label for="codePostal">Code Postal</label>
+    <input type="text" name="codePostal" value="<?= htmlentities($user['codePostal'] ?? 'Anonyme') ?>">
+    <button type="submit">Update</button>
+</form>
+
+<p>Mode de passe :</p>
+<form action="<?= url('/user/editPassword') ?>" method="post">
+    <input type="password" name="passwordOld"  placeholder="Ancien mode de passe"/>
+    <input type="password" name="newPassword" placeholder="Nouveau mode de passe"/>
+	<?php if (flashBag()->has('password')): ?>
+        <p><?= flashBag()->get('password') ?></p>
+	<?php endif; ?>
+
+    <button type="submit">Update password</button>
+</form>
+<p>Supprime Mon Compte</p>
+<form action="<?= url('/user/delete') ?>">
+    <label for="delete">Vous êtes sur de supprimer le compte </label>
+    <input type="checkbox" name="delete" class="delete-user">
+    <button type="submit">Supprime moi</button>
+</form>

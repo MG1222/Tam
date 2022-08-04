@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS -->
+    <!-- css normalize -->
+    <link rel="stylesheet" href="/projet/asset/css/normalize.css">
+    <!-- css by me -->
+    <link rel="stylesheet" href="/projet/asset/css/style.css">
+    <!-- JS -->
+    <script type="module" src="/projet/asset/js/main.js"></script>
+	<title>Document</title>
+</head>
+
+    <div class="container">
+
+
+     <!--HEADER-->
+        <header class="header">
+            <nav class="nav">
+                <img src="/projet/asset/img/site/2.svg" alt="tamagotchi-logo" class="logo">
+                <ul>
+                    <li><a href="<?= url('/') ?>">Home</a></li>
+                    <li><a href ="<?= url ('/basket') ?>">Panier</a></li>
+                    <?php if (!(auth()->isAuthenticated())): ?>
+                    <li class="drop-down">
+                        Se Connecte
+                        <ul class="drop-items">
+                            <li><a href="<?= url('/signUp') ?>">Sign Up</a></li>
+                            <li><a href="<?= url('/logIn') ?>">Log In</a></li>
+                        </ul>
+                    </li>
+                        <?php else: ?>
+                            <li class="drop-down">Mon Compte
+                                <ul class="drop-items">
+                                    <li><a href="<?= url('/profile') ?>">Profile</a></li>
+                                    <li><a href="<?= url('/logOut') ?>">Log Out</a></li>
+                                </ul>
+                            </li>
+                        <?php endif ?>
+                    <?php if (auth()->isAdmin()): ?>
+                    <li><a href="<?= url('/admin') ?>">Admin</a></li>
+                    <?php endif ?>
+
+                </ul>
+            </nav>
+            <h1 class="title">Tamagotchi</h1>
+            <h3 class="subtitle">E-commerce de la nostalgie</h3>
+        </header>
+
+        <!--CONTENT-->
+        <main>
+            <?php require $template . '.phtml'?>
+        </main>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <p>With love &copy; 2022</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
+

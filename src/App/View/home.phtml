@@ -1,0 +1,18 @@
+<p>HOME</p>
+<?php if (auth()->isAuthenticated()):?>
+    <?php if (auth()->isAdmin()):?>
+    <p>Vous êtes admin</p>
+<?php endif ?>
+    <p>Vous êtes connecté</p>
+
+<?php else:?>
+    <p>Hello</p>
+<?php endif;?>
+
+// show all products
+<p>PRODUCTS</p>
+
+
+
+
+
