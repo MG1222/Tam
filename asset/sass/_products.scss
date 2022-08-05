@@ -1,4 +1,6 @@
 $color-link: #8679ee;
+$transition: all 0.5s;
+
 .products {
     width: 100%;
     display: flex;
@@ -6,16 +8,11 @@ $color-link: #8679ee;
     align-items: center;
     justify-content: center;
 
-    .product:nth-child(even) {
-      border: 1px solid black;
-      margin-top: 5rem;
-    }
-    .product:nth-child(even):hover {
-      margin-top: 0;
-    }
 
 
     .product{
+      box-shadow: 10px 16px 0 5px #000000;
+      transition: $transition;
       max-width: 22rem;
       height: 28rem;
       border: 2px solid black;
@@ -25,7 +22,11 @@ $color-link: #8679ee;
       margin: 26px;
       padding: 12px;
 
+      &:hover,
+      &:focus {
+        box-shadow: 13px 25px 0 6px #000000;
 
+      }
 
 
 
@@ -52,7 +53,7 @@ $color-link: #8679ee;
   letter-spacing: 3px;
   color: $color-link;
   display: block;
-  transition: all 0.5s;
+  transition: $transition;
   background: white;
   border: none;
 
