@@ -1,5 +1,7 @@
 <p>panier</p>
-<?php foreach ($baskets as $basket): ?>
+<?php if ($baskets): ?>
+
+    <?php foreach ($baskets as $basket): ?>
     <p>
         <?= $basket['product_id'] ?>
         <?= $basket['name'] ?>
@@ -16,14 +18,20 @@
     </form>
 
 <?php endforeach; ?>
+    <hr>
+    <p>total : <?= $totalPrice ?>$</p>
+    <a href="<?= url('/') ?>">retourn</a>
 
-<hr>
-<p>total : <?= $totalPrice ?>$</p>
-<a href="<?= url('/') ?>">retourn</a>
+    <form action="<?= url('/basket/checkout') ?>" method="GET">
+        <input type="submit" value="checkout">
+    </form>
 
-<form action="<?= url('/basket/checkout') ?>" method="GET">
-    <input type="submit" value="checkout">
-</form>
+
+<?php else: ?>
+    <p>panier vide</p>
+<?php endif; ?>
+
+
 
 
 

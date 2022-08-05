@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3e1f541-de65-4085-b8a1-41ff36614132" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/asset/sass/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/sass/_products.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/sass/_navBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/_navBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/sass/_tab.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controller/BasketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/Basket/basket.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Basket/basket.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/Product/productOne.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Product/productOne.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/Product/productsAll.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Product/productsAll.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/layout.phtml" afterDir="false" />
     </list>
@@ -63,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659682578455</updated>
-      <workItem from="1659682579669" duration="8044000" />
+      <workItem from="1659682579669" duration="14355000" />
     </task>
     <servers />
   </component>

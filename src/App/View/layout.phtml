@@ -40,9 +40,6 @@
                                 <ul class="drop-items">
                                     <li><a href="<?= url('/profile') ?>">Profile</a></li>
                                     <li><a href="<?= url('/logOut') ?>">Log Out</a></li>
-									<?php if (auth()->isAdmin()): ?>
-                                        <li><a href="<?= url('/admin') ?>">Admin</a></li>
-									<?php endif ?>
                                 </ul>
                             </li>
                         <?php endif ?>

@@ -1,16 +1,25 @@
-<p>Product show</p>
+<div class="product product-show">
+    <img src="<?= url('../../asset/img/products/' . $product['img']) ?>" alt="img" width="100px" height="100px">
 
+    <h2><?= $product['name'] ?></h2>
+    <p><?= $product['description'] ?></p>
 
-    <?= $product['name'] ?>
-    <?= $product['id'] ?>
-    <img src="<?= url('../../asset/img/products/' . $product['img']) ?>" alt="img" width="50px" height="50px">
-    <?= $product['description'] ?>
-    <p>  <?= $product['price'] ?> € </p>
+    <div class="info-product">
+        <p class="price">  <?= $product['price'] ?> € </p>
 
-
-
-    <a href="<?= url('/') ?>">retourn</a>
-
+        <a href="<?= url('/product/show?id=' . $product['id']) ?>" class="link">Info </a>
+		<?php if (auth()->isAdmin()): ?>
+            <a href="<?= url('/product/delete?id=' . $product['id']) ?>" class="link">Supprimer le produit</a>
+            <a href="<?= url('/product/edit/' . $product['id']) ?>" class="link">edit</a>
+		<?php endif; ?>
+    </div>
     <form method="POST">
-        <input type="submit" value="submit" name="submit">
+        <input type="submit" value="Acheter" name="submit" class="link">
     </form>
+
+</div>
+
+
+
+    <a href="<?= url('/') ?>" class="link">retourn</a>
+

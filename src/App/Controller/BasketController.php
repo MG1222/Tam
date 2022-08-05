@@ -29,9 +29,13 @@
 			$baskets = $model->getBasket($userId);
 
 			$totalPrice = 0;
-			foreach ($baskets as $basket) {
-				$totalPrice += $basket['price'];
+			if ($baskets) {
+				foreach ($baskets as $basket) {
+					$totalPrice += $basket['price'];
+				}
 			}
+
+
 
 
 

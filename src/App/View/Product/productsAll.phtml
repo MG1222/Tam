@@ -3,11 +3,18 @@
         <div class="product">
             <img src="<?= url('../../asset/img/products/' . $product['img']) ?>" alt="img" width="100px" height="100px">
 
-            <h3><?= $product['name'] ?></h3>
+            <h2><?= $product['name'] ?></h2>
             <p><?= $product['description'] ?></p>
-            <p class="price">  <?= $product['price'] ?> € </p>
-            <a href="<?= url('/product/edit/' . $product['id']) ?>">edit</a>
-            <a href="<?= url('/product/show?id=' . $product['id']) ?>">Voir le produit</a>
+
+            <div class="info-product">
+                <p class="price">  <?= $product['price'] ?> € </p>
+
+                <a href="<?= url('/product/show?id=' . $product['id']) ?>" class="link">Info </a>
+                <?php if (auth()->isAdmin()): ?>
+                    <a href="<?= url('/product/delete?id=' . $product['id']) ?>" class="link">Supprimer le produit</a>
+                    <a href="<?= url('/product/edit/' . $product['id']) ?>" class="link">edit</a>
+                <?php endif; ?>
+            </div>
         </div>
     <?php endforeach; ?>
 
