@@ -1,6 +1,7 @@
 @use "navBar";
 @use "products";
 @use "footer";
+
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 html {
@@ -11,9 +12,9 @@ html {
 
 .container {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   flex-grow: 1;
 
   h1,
@@ -44,6 +45,7 @@ html {
     align-items: center;
     width: 92%;
     padding: 2rem;
+    min-height: 100vh;
     border-left: 2px solid black;
     border-right: 2px solid black;
   }

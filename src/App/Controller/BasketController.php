@@ -83,10 +83,17 @@
 
 		public function checkout(): void
 		{
+            // 1. Retrieve the basket to checkout
+            // 2. Retrieve products contained within the basket from SQL DB
+            // (Optional: retrieve "stripe information" from stripe_product_id" and check if product is "active")
+            // 3. Create a "stripe payment" with stripe_product_id
+            // 4. Open "stripe page" with payment information
 			$stripe = new \Stripe\StripeClient(
 				$this->getConfig()['stripe']['key'],
 				$this->getConfig()['stripe']['keySecret']
 			);
+
+
 
 		}
 

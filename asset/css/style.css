@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 .header {
-  width: 100%;
+  width: 92%;
+  padding: 2rem;
   height: 30rem;
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +9,8 @@
   align-items: center;
   justify-content: space-around;
   border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 .header .nav {
   width: 100%;
@@ -68,16 +71,6 @@
   margin: 26px;
   padding: 12px;
 }
-.products .product .info-product {
-  max-width: 15rem;
-  gap: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
 .products .price {
   font-size: 2.2rem;
 }
@@ -86,33 +79,47 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-top: 5rem;
 }
 
 .link {
-  background: #979696;
-  border-bottom: 6px inset rgba(0, 0, 0, 0.5);
-  border-left: 6px inset rgba(0, 0, 0, 0.5);
-  border-right: 6px inset rgba(255, 255, 255, 0.5);
-  border-top: 6px inset rgba(255, 255, 255, 0.5);
-  box-sizing: border-box;
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  min-width: 5rem;
   text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #8679ee;
+  display: block;
+  transition: all 0.5s;
+  background: white;
+  border: none;
 }
 .link:focus, .link:hover {
-  background: #BCBCBC;
+  padding: 0.2rem;
+  background: white;
+  color: #8679ee;
+  letter-spacing: 5px;
+  box-shadow: 18px 14px 0px 0px #8679ee;
+  border: 1px solid #8679ee;
+}
+
+.btn-space {
+  max-width: 15rem;
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
 }
 
 .footer {
-  border-top: 3px solid black;
-  width: 100%;
+  width: 92%;
+  padding: 2rem;
   text-align: center;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 html {
@@ -155,6 +162,7 @@ html {
   align-items: center;
   width: 92%;
   padding: 2rem;
+  min-height: 100vh;
   border-left: 2px solid black;
   border-right: 2px solid black;
 }

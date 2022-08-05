@@ -14,6 +14,10 @@
 		 */
 		public function create (array $data): ?int
 		{
+            // 1. Create a product on Stripe ?
+            // 2. Retrieve a "stripe_product_id".
+            // 3. Insert new product into SQL DB (with stripe_product_id)
+
 			$productId = $this->db->execute('INSERT INTO products (img, name, description, price) VALUES (:img, :name, :description, :price)', [
 				'img' => $data['img'],
 				'name' => $data['name'],

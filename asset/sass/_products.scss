@@ -1,3 +1,4 @@
+$color-link: #8679ee;
 .products {
     width: 100%;
     display: flex;
@@ -26,17 +27,7 @@
 
 
 
-      .info-product {
-        max-width: 15rem;
-        gap: 1rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        text-align: center;
 
-      }
 
     }
 
@@ -47,33 +38,45 @@
   }
 
 .product-show {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
   }
 
 .link {
-    background: #979696;
-    border-bottom: 6px inset rgba(0, 0, 0, .5);
-    border-left: 6px inset rgba(0, 0, 0, .5);
-    border-right: 6px inset rgba(255, 255, 255, .5);
-    border-top: 6px inset rgba(255, 255, 255, .5);
-    box-sizing: border-box;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1rem;
-    min-width: 5rem;
-    text-transform: uppercase;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: $color-link;
+  display: block;
+  transition: all 0.5s;
+  background: white;
+  border: none;
 
 
     &:focus,
     &:hover {
-      background: #BCBCBC;
+      padding: 0.2rem;
+      background: white;
+      color: $color-link;
+      letter-spacing: 5px;
+      box-shadow: 18px 14px 0px 0px $color-link;
+      border: 1px solid $color-link;
     }
   }
+
+.btn-space{
+  max-width: 15rem;
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+
+}
 
 
