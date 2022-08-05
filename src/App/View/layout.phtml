@@ -22,7 +22,9 @@
         <header class="header">
             <nav class="nav">
                 <img src="/project/asset/img/site/2.svg" alt="tamagotchi-logo" class="logo">
+                <h2 class="title">Tamagotchi</h2>
                 <ul>
+
                     <li><a href="<?= url('/') ?>">Home</a></li>
                     <li><a href ="<?= url ('/basket') ?>">Panier</a></li>
                     <?php if (!(auth()->isAuthenticated())): ?>
@@ -38,6 +40,9 @@
                                 <ul class="drop-items">
                                     <li><a href="<?= url('/profile') ?>">Profile</a></li>
                                     <li><a href="<?= url('/logOut') ?>">Log Out</a></li>
+									<?php if (auth()->isAdmin()): ?>
+                                        <li><a href="<?= url('/admin') ?>">Admin</a></li>
+									<?php endif ?>
                                 </ul>
                             </li>
                         <?php endif ?>
@@ -47,8 +52,7 @@
 
                 </ul>
             </nav>
-            <h1 class="title">Tamagotchi</h1>
-            <h3 class="subtitle">E-commerce de la nostalgie</h3>
+            <h1 class="subtitle">E-commerce de la nostalgie</h1>
         </header>
 
         <!--CONTENT-->

@@ -1,21 +1,19 @@
 <p>all</p>
 
+<div class="products">
+    <?php foreach ($products as $product) : ?>
+        <div class="product">
+            <img src="<?= url('../../asset/img/products/' . $product['img']) ?>" alt="img" width="100px" height="100px">
 
-    <ul class="list-of-products">
-        <?php foreach ($products as $product): ?>
-            <li>
-                <?= $product['name'] ?>
-            </li>
-            <li>
-                <?= $product['price'] ?>
-            </li>
-            <li>
-                <?= $product['description'] ?>
-            </li>
-
+            <h3><?= $product['name'] ?></h3>
+            <p><?= $product['description'] ?></p>
             <p class="price">  <?= $product['price'] ?> € </p>
-            <img src="<?= url('../../asset/img/products/' . $product['img']) ?>" alt="img" width="50px" height="50px">
             <a href="<?= url('/product/edit/' . $product['id']) ?>">edit</a>
             <a href="<?= url('/product/show?id=' . $product['id']) ?>">Voir le produit</a>
-        <?php endforeach; ?>
-    </ul>
+        </div>
+    <?php endforeach; ?>
+
+</div>
+
+
+
