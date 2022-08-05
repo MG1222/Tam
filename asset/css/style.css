@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-/*body {
-  background: rgb(134,121,238);
-  background: linear-gradient(90deg, rgba(134,121,238,1) 0%, rgba(177,135,229,1) 56%);
-}*/
 .tab {
   display: flex;
   flex-wrap: wrap;
@@ -65,15 +61,40 @@
   left: -39px;
 }
 
+html {
+  min-height: 100%; /* Look, it's not fixed anymore! */
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
+  flex-grow: 1;
 }
-.container h1, .container h3, .container p, .container a, .container li, .container input, .container button {
+.container h1,
+.container h3,
+.container p,
+.container a,
+.container li,
+.container input,
+.container button {
   font-family: "VT323", monospace, sans-serif;
+}
+.container .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .main .list-of-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .main .list-of-products .list-of-products > li {
+  width: 50px;
+  hieght: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

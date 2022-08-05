@@ -6,13 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSS -->
     <!-- css normalize -->
-    <link rel="stylesheet" href="/projet/asset/css/normalize.css">
+    <link rel="stylesheet" href="/project/asset/css/normalize.css">
     <!-- css by me -->
-    <link rel="stylesheet" href="/projet/asset/css/style.css">
+    <link rel="stylesheet" href="/project/asset/css/style.css">
     <!-- JS -->
-    <script type="module" src="/projet/asset/js/main.js"></script>
+    <script type="module" src="/project/asset/js/main.js"></script>
 	<title>Document</title>
 </head>
+<body>
 
     <div class="container">
 
@@ -20,7 +21,7 @@
      <!--HEADER-->
         <header class="header">
             <nav class="nav">
-                <img src="/projet/asset/img/site/2.svg" alt="tamagotchi-logo" class="logo">
+                <img src="/project/asset/img/site/2.svg" alt="tamagotchi-logo" class="logo">
                 <ul>
                     <li><a href="<?= url('/') ?>">Home</a></li>
                     <li><a href ="<?= url ('/basket') ?>">Panier</a></li>
@@ -51,7 +52,7 @@
         </header>
 
         <!--CONTENT-->
-        <main>
+        <main class="main">
             <?php require $template . '.phtml'?>
         </main>
 
@@ -59,6 +60,7 @@
         <footer class="footer">
             <p>With love &copy; 2022</p>
         </footer>
+
     </div>
 
 

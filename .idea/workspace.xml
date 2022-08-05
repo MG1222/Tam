@@ -4,13 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e644291f-47c7-4e30-8003-cd1ce403aac0" name="Changes" comment="first try" />
+    <list default="true" id="a3e1f541-de65-4085-b8a1-41ff36614132" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9accd4e4-f255-43e3-8a12-4eb5cc9b5c25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9accd4e4-f255-43e3-8a12-4eb5cc9b5c25/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9accd4e4-f255-43e3-8a12-4eb5cc9b5c25/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9accd4e4-f255-43e3-8a12-4eb5cc9b5c25/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9accd4e4-f255-43e3-8a12-4eb5cc9b5c25/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/projet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/js/logoswitch.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/logoswitch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/sass/_navBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/_navBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/Product/productsAll.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Product/productsAll.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/layout.phtml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -19,71 +42,42 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2AqOn6ITQ4OiebCDHUVAIypzjDK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2CvUVsqh5W2swaUdTVPJYuppkro" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/margad/Desktop/projet/src/Library&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Library" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/asset/img/products" />
-      <recent name="$PROJECT_DIR$/asset/img/site" />
-      <recent name="$PROJECT_DIR$/asset/img" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/App" />
-    </key>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e644291f-47c7-4e30-8003-cd1ce403aac0" name="Changes" comment="" />
-      <created>1655733812853</created>
+      <changelist id="a3e1f541-de65-4085-b8a1-41ff36614132" name="Changes" comment="" />
+      <created>1659682578455</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655733812853</updated>
-      <workItem from="1655733814561" duration="7189000" />
-      <workItem from="1655802669794" duration="2585000" />
-      <workItem from="1655805405505" duration="3030000" />
-      <workItem from="1655814674845" duration="9782000" />
-      <workItem from="1655884225754" duration="13000" />
-      <workItem from="1655884322581" duration="39000" />
-      <workItem from="1655884376451" duration="311000" />
-      <workItem from="1655884704194" duration="48000" />
-      <workItem from="1655884768683" duration="319000" />
-      <workItem from="1655885183535" duration="84000" />
-      <workItem from="1655885288333" duration="22307000" />
-      <workItem from="1655959819730" duration="48990000" />
-      <workItem from="1658530893924" duration="260000" />
-      <workItem from="1658531314195" duration="265000" />
-      <workItem from="1658737220599" duration="3161000" />
-      <workItem from="1659425847516" duration="7341000" />
-      <workItem from="1659531338486" duration="12320000" />
-      <workItem from="1659554894945" duration="5248000" />
-      <workItem from="1659597014578" duration="26330000" />
+      <updated>1659682578455</updated>
+      <workItem from="1659682579669" duration="2070000" />
     </task>
     <servers />
   </component>
@@ -95,30 +89,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="first try" />
-    <option name="LAST_COMMIT_MESSAGE" value="first try" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

@@ -2,15 +2,42 @@
 @use "navBar";
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-.container {
+html {
+  min-height: 100%; /* Look, it's not fixed anymore! */
 
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
   display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
-  h1, h3, p, a, li, input, button {
+  flex-grow: 1;
+
+  h1,
+  h3,
+  p,
+  a,
+  li,
+  input,
+  button {
     font-family: 'VT323', monospace, sans-serif;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .list-of-products {
+      display: flex;
+      flex-wrap: wrap;
+    .list-of-products > li {
+      width: 50px;
+      hieght: 100%;
+    }
+    }
+
   }
 }
 
