@@ -10,17 +10,14 @@
       <change beforePath="$PROJECT_DIR$/asset/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/sass/_navBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/_navBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/sass/_products.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/_products.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/sass/_user.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/_user.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controller/BasketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/Admin/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Admin/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/Basket/basket.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Basket/basket.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/User/logIn.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/logIn.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/User/profile.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/profile.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/User/signUp.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/signUp.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/View/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/layout.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +77,7 @@
       <workItem from="1659732279332" duration="4872000" />
       <workItem from="1659767485260" duration="20187000" />
       <workItem from="1659855033014" duration="2868000" />
-      <workItem from="1659875428457" duration="654000" />
+      <workItem from="1659875428457" duration="7816000" />
     </task>
     <servers />
   </component>

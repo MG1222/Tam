@@ -1,4 +1,9 @@
     <div class="errors">
+        <div class="error-header">
+            <div class="like-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
         <?php if (flashBag()->has('basketError')): ?>
             <p class="error"><?= flashBag()->get('basketError') ?></p>
         <?php endif; ?>
@@ -33,6 +38,11 @@
 
 <?php else: ?>
     <div class="errors">
+        <div class="error-header">
+            <div class="like-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
         <p class="error">Oups ... mais il y a rien dans ton panier ... <i class="fa-solid fa-poo"></i></p>
         <a href="<?= url('/') ?>" class="link">retourn</a>
     </div>

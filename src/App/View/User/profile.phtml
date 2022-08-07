@@ -13,15 +13,21 @@
             <input type="text" name="firstName" value="<?= htmlentities($user['firstName'] ?? 'Prénom') ?>" class="input" />
             <input type="text" name="lastName" value="<?= htmlentities($user['lastName'] ?? 'Nom') ?>" class="input" />
             <input type="text" name="email" value="<?= htmlentities($user['email'] ?? 'Email') ?>" class="input"/>
+
+
         <!--  if Errors -->
-        <div class="errors">
 			<?php if (flashBag()->has('email')): ?>
-                <p class="error"><?= flashBag()->get('email') ?></p>
+                <div class="errors">
+                    <div class="error-header">
+                        <div class="like-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <p class="error"><?= flashBag()->get('email') ?></p>
+                </div>
 			<?php endif; ?>
-        </div>
 
         <!-- ADRESSE -->
-
         <input type="text" name="address" value="<?= htmlentities($user['address'] ?? 'Adresse') ?>" class="input"/>
         <input type="text" name="city" value="<?= htmlentities($user['city'] ?? 'Ville') ?>" class="input">
         <input type="text" name="codePostal" value="<?= htmlentities($user['codePostal'] ?? '33 000') ?>" class="input">
@@ -37,11 +43,17 @@
         <input type="password" name="newPassword" placeholder="Nouveau mode de passe" class="input"/>
 
         <!--  if Errors -->
-        <div class="errors">
+
             <?php if (flashBag()->has('password')): ?>
+            <div class="errors">
+                <div class="error-header">
+                    <div class="like-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
                 <p class="error"><?= flashBag()->get('password') ?></p>
+            </div>
             <?php endif; ?>
-        </div>
         <button type="submit" class="link">Modifier mon mdp</button>
     </form>
     <!-- DELETE  -->
@@ -53,11 +65,18 @@
             <button type="submit" class="link delete">Sayonara</button>
 
             <!--  if Errors -->
-            <div class="errors">
+
                 <?php if (flashBag()->has('delete')): ?>
+                <div class="errors">
+                    <div class="error-header">
+                        <div class="like-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
                     <p class="error"><?= flashBag()->get('delete') ?></p>
+                </div>
                 <?php endif; ?>
-            </div>
+
 
         </form>
     </div>
