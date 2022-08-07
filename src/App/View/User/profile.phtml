@@ -14,9 +14,9 @@
             <input type="text" name="lastName" value="<?= htmlentities($user['lastName'] ?? 'Nom') ?>" class="input" />
             <input type="text" name="email" value="<?= htmlentities($user['email'] ?? 'Email') ?>" class="input"/>
         <!--  if Errors -->
-        <div class="error">
+        <div class="errors">
 			<?php if (flashBag()->has('email')): ?>
-                <p class="errors"><?= flashBag()->get('email') ?></p>
+                <p class="error"><?= flashBag()->get('email') ?></p>
 			<?php endif; ?>
         </div>
 
@@ -32,12 +32,16 @@
     <form action="<?= url('/user/editPassword') ?>" method="post">
         <!--  old pwd -->
         <input type="password" name="passwordOld"  placeholder="Ancien mode de passe" class="input"/>
+
         <!--  new pwd -->
         <input type="password" name="newPassword" placeholder="Nouveau mode de passe" class="input"/>
+
         <!--  if Errors -->
-        <?php if (flashBag()->has('password')): ?>
-            <p class="error"><?= flashBag()->get('password') ?></p>
-        <?php endif; ?>
+        <div class="errors">
+            <?php if (flashBag()->has('password')): ?>
+                <p class="error"><?= flashBag()->get('password') ?></p>
+            <?php endif; ?>
+        </div>
         <button type="submit" class="link">Modifier mon mdp</button>
     </form>
     <!-- DELETE  -->
@@ -47,9 +51,14 @@
             <label for="delete">Vraiment ?  </label>
             <input type="checkbox" name="delete" class="delete-user">
             <button type="submit" class="link delete">Sayonara</button>
-            <?php if (flashBag()->has('delete')): ?>
-                <p class="errors"><?= flashBag()->get('delete') ?></p>
-            <?php endif; ?>
+
+            <!--  if Errors -->
+            <div class="errors">
+                <?php if (flashBag()->has('delete')): ?>
+                    <p class="error"><?= flashBag()->get('delete') ?></p>
+                <?php endif; ?>
+            </div>
+
         </form>
     </div>
 </div>

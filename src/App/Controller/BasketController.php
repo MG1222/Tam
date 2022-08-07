@@ -16,10 +16,10 @@
 		{
 			// if user not log in he is redirected to log in page
 			if (!(auth()->isAuthenticated())) {
-				$errors['basketError'] = "Vous devez être connecté pour accéder à votre panier";
+				$errors['basketError'] = "Oups... On doit être connecté pour voir votre panier.";
 				if  (count($errors) > 0) {
 					$_SESSION['error'] = $errors;
-					$this->redirect('/signUp');
+					$this->redirect('/logIn');
 				}
 			}
 
@@ -34,9 +34,6 @@
 					$totalPrice += $basket['price'];
 				}
 			}
-
-
-
 
 
 			$this->display('Basket/basket', ['baskets' => $baskets,
@@ -56,7 +53,11 @@
 
 			//check if product exist
 			if (empty($product)) {
-				throw new NotFoundException('Product not found');
+				$errors['basketError'] = "Ce produit n'existe pas";
+				if (count($errors) > 0) {
+					$_SESSION['error'] = $errors;
+					$this->redirect('/');
+				}
 			}
 
 			if (isset($_POST['submit'])) {

@@ -17,26 +17,15 @@ $transition: all 0.5s;
     align-items: center;
 
 
-
-
-    // hide and show hint for password
-    .hint{
-      display: none;
-    }
-
-
     .show {
       display: flex;
       margin: 1.5rem;
       color: #898787;
     }
 
-    .error {
-      color: red;
-      font-size: 1.2rem;
-      margin-top: 1rem;
-    }
   }
+
+//user-connect
   .not-yet-sign-up {
     display: flex;
     gap: 1rem;
@@ -44,8 +33,6 @@ $transition: all 0.5s;
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-
 
 }
 .input {

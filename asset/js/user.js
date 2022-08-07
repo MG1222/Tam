@@ -22,16 +22,18 @@ export const iconSwitch = () => {
 
 export const showHint = () => {
     setTimeout(() => {
-        const hint = document.querySelector('.hint');
-        hint.classList.add('show');
+        const input = document.querySelector('.password');
+        input.placeholder = 'en moins de 8 caractères';
+
+
+
     }
     , 1000);
+    setTimeout(() => {
+            const input = document.querySelector('.password');
+            input.placeholder = 'mot de passe';
+        }
+        , 4000);
+
 }
 
-export const hideHint = () => {
-    setTimeout(() => {
-        const hint = document.querySelector('.hint');
-        hint.classList.remove('show');
-    }
-    , 4000);
-}

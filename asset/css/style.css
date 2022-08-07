@@ -108,18 +108,10 @@
   flex-wrap: wrap;
   align-items: center;
 }
-.user-connect .user-form .hint {
-  display: none;
-}
 .user-connect .user-form .show {
   display: flex;
   margin: 1.5rem;
   color: #898787;
-}
-.user-connect .user-form .error {
-  color: red;
-  font-size: 1.2rem;
-  margin-top: 1rem;
 }
 .user-connect .not-yet-sign-up {
   display: flex;
@@ -231,7 +223,6 @@ html {
   color: red;
 }
 .container .error {
-  color: red;
   font-size: 1.2rem;
   margin-top: 1rem;
 }
