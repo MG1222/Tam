@@ -1,0 +1,81 @@
+$transition: all 0.5s;
+
+.user-connect {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+
+  .user-form {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+
+
+    // hide and show hint for password
+    .hint{
+      display: none;
+    }
+
+
+    .show {
+      display: flex;
+      margin: 1.5rem;
+      color: #898787;
+    }
+
+    .error {
+      color: red;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  }
+  .not-yet-sign-up {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+
+}
+.input {
+  margin: 1rem;
+  outline: none;
+  border: none;
+  transition: $transition;
+  border-bottom: 2px solid black;
+  &:hover,
+  &:focus {
+    box-shadow: 2px 2px 0 2px #000000;
+
+  }
+
+}
+
+// user profile
+.user-profile {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+
+  .delete-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+}

@@ -79,36 +79,78 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
-}
-
-.link {
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 3px;
-  color: #8679ee;
-  display: block;
-  transition: all 0.5s;
-  background: white;
-  border: none;
-}
-.link:focus, .link:hover {
-  padding: 0.2rem;
-  background: white;
-  color: #8679ee;
-  letter-spacing: 5px;
-  box-shadow: 18px 14px 0px 0px #8679ee;
-  border: 1px solid #8679ee;
+  margin: 4rem;
 }
 
 .btn-space {
   max-width: 15rem;
-  gap: 2.5rem;
   display: flex;
-  flex-direction: row;
+  gap: 2.5rem;
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
+  justify-content: center;
+}
+
+.user-connect {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+.user-connect .user-form {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.user-connect .user-form .hint {
+  display: none;
+}
+.user-connect .user-form .show {
+  display: flex;
+  margin: 1.5rem;
+  color: #898787;
+}
+.user-connect .user-form .error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.user-connect .not-yet-sign-up {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.input {
+  margin: 1rem;
+  outline: none;
+  border: none;
+  transition: all 0.5s;
+  border-bottom: 2px solid black;
+}
+.input:hover, .input:focus {
+  box-shadow: 2px 2px 0 2px #000000;
+}
+
+.user-profile {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+.user-profile .delete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer {
@@ -163,6 +205,35 @@ html {
   min-height: 100vh;
   border-left: 2px solid black;
   border-right: 2px solid black;
+}
+.container .link {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #8679ee;
+  display: block;
+  transition: all 0.5s;
+  background: white;
+  border: none;
+  max-width: 22rem;
+  max-height: 4rem;
+  margin: 1rem;
+}
+.container .link:focus, .container .link:hover {
+  padding: 0.2rem;
+  background: white;
+  color: #000;
+  letter-spacing: 5px;
+  box-shadow: 6px 4px 0px 1px #000000;
+  border: 1px solid #000000;
+}
+.container .delete {
+  color: red;
+}
+.container .error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

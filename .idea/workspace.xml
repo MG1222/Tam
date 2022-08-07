@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3e1f541-de65-4085-b8a1-41ff36614132" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/asset/img/site/hide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/js/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/sass/_user.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/js/dropDown.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/dropDown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/sass/_products.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/_products.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/404.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/404.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/Basket/basket.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Basket/basket.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/Product/productOne.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Product/productOne.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/User/logIn.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/logIn.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/User/profile.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/profile.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/User/signUp.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/signUp.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/layout.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +66,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/asset/img/site" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,7 +80,8 @@
       <option name="presentableId" value="Default" />
       <updated>1659682578455</updated>
       <workItem from="1659682579669" duration="15838000" />
-      <workItem from="1659732279332" duration="3701000" />
+      <workItem from="1659732279332" duration="4872000" />
+      <workItem from="1659767485260" duration="19879000" />
     </task>
     <servers />
   </component>

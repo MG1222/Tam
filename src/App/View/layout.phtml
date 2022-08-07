@@ -10,6 +10,9 @@
     <!-- css by me -->
     <link rel="stylesheet" href="/project/asset/css/style.css">
     <!-- JS -->
+
+    <script src="https://kit.fontawesome.com/2a9d76558e.js" crossorigin="anonymous"></script>
+
     <script type="module" src="/project/asset/js/main.js"></script>
 	<title>Document</title>
 </head>
@@ -18,37 +21,40 @@
     <div class="container">
 
 
+
      <!--HEADER-->
         <header class="header">
             <nav class="nav">
                 <img src="/project/asset/img/site/2.svg" alt="tamagotchi-logo" class="logo">
                 <h2 class="title">Tamagotchi</h2>
-                <ul>
 
+                <ul>
                     <li><a href="<?= url('/') ?>">Home</a></li>
                     <li><a href ="<?= url ('/basket') ?>">Panier</a></li>
                     <?php if (!(auth()->isAuthenticated())): ?>
                     <li class="drop-down">
-                        Se Connecte
+                        Se Connecter
                         <ul class="drop-items">
-                            <li><a href="<?= url('/signUp') ?>">Sign Up</a></li>
-                            <li><a href="<?= url('/logIn') ?>">Log In</a></li>
+                            <li><a href="<?= url('/signUp') ?>">Creé mon compte </a></li>
+                            <li><a href="<?= url('/logIn') ?>">Se connecter</a></li>
                         </ul>
                     </li>
                         <?php else: ?>
                             <li class="drop-down">Mon Compte
                                 <ul class="drop-items">
                                     <li><a href="<?= url('/profile') ?>">Profile</a></li>
-                                    <li><a href="<?= url('/logOut') ?>">Log Out</a></li>
+                                    <li><a href="<?= url('/logOut') ?>">A plus </a></li>
                                 </ul>
                             </li>
                         <?php endif ?>
-                    <?php if (auth()->isAdmin()): ?>
-                    <li><a href="<?= url('/admin') ?>">Admin</a></li>
-                    <?php endif ?>
+
+                        <?php if (auth()->isAdmin()): ?>
+                        <li><a href="<?= url('/admin') ?>">Admin</a></li>
+                        <?php endif ?>
 
                 </ul>
             </nav>
+
             <h1 class="subtitle">E-commerce de la nostalgie</h1>
             <p>Un Tamagotchi (たまごっち) est un animal de compagnie virtuel japonais</p>
         </header>

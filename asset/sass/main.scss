@@ -1,9 +1,13 @@
 @use "navBar";
 @use "products";
+@use "user";
 @use "footer";
+
 
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+$color-link: #8679ee;
+$transition: all 0.5s;
 html {
   min-height: 100%;
   display: flex;
@@ -49,7 +53,42 @@ html {
     min-height: 100vh;
     border-left: 2px solid black;
     border-right: 2px solid black;
+
+
   }
+  .link {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: $color-link;
+    display: block;
+    transition: $transition;
+    background: white;
+    border: none;
+    max-width: 22rem;
+    max-height: 4rem;
+    margin: 1rem;
+
+
+    &:focus,
+    &:hover {
+      padding: 0.2rem;
+      background: white;
+      color: #000;
+      letter-spacing: 5px;
+      box-shadow: 6px 4px 0px 1px #000000;
+      border: 1px solid #000000;
+    }
+  }
+  .delete {
+    color: red;
+  }
+.error {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
 
 
 

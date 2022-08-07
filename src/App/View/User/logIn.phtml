@@ -1,15 +1,29 @@
-<p>Se connecter</p>
-<form method="POST" action="<?= url('/user/auth') ?>">
+<div class="user-connect">
+    <h2>SE CONNECTER </h2>
+    <form method="POST" action="<?= url('/user/auth') ?>" class="user-form">
 
-	<input type="text" name="email" placeholder="email">
-    <?php if (flashBag()->has('email')): ?>
-        <p><?= flashBag()->get('email') ?></p>
-    <?php endif; ?>
+        <div class="input-box">
+            <input type="text" name="email" placeholder="email" class="input">
+            <i class="fa-solid fa-at"></i>
+        </div>
+        <!-- if Errors -->
+        <?php if (flashBag()->has('email')): ?>
+            <p><?= flashBag()->get('email') ?></p>
+        <?php endif; ?>
 
-	<input type="password" name="password" placeholder="password">
-	<?php if (flashBag()->has('password')): ?>
-        <p><?= flashBag()->get('password') ?></p>
-	<?php endif; ?>
-
-	<button type="submit">Se connecter</button>
-</form>
+        <div class="input-box">
+            <input type="password" name="password" placeholder="mot de passe" class="password input">
+            <i class="fa-solid fa-eye"></i>
+            <p class="hint">en moin 8 caractère </p>
+        </div>
+        <!-- if Errors -->
+        <?php if (flashBag()->has('password')): ?>
+            <p><?= flashBag()->get('password') ?></p>
+        <?php endif; ?>
+        <button type="submit" class="link">Se connecter</button>
+    </form>
+    <div class="not-yet-sign-up">
+        <p>Pas encore inscrit ? </p>
+        <a href="<?= url('/user/signUp') ?>" class="link">Créer un compte</a></p>
+    </div>
+</div>

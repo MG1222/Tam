@@ -128,3 +128,10 @@
 05/08/2022 06:50:28 : La route n'existe pas
 05/08/2022 06:50:41 : La route n'existe pas
 05/08/2022 06:54:17 : La route n'existe pas
+05/08/2022 22:47:58 : La route n'existe pas
+05/08/2022 22:48:02 : La route n'existe pas
+05/08/2022 22:48:16 : La route n'existe pas
+05/08/2022 22:52:35 : La route n'existe pas
+06/08/2022 07:15:45 : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+06/08/2022 20:52:41 : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+06/08/2022 20:56:54 : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null

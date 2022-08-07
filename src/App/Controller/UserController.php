@@ -37,12 +37,14 @@
 
 			$user = $model->findByEmail($_POST['email']);
 			$errors = $this->validForm($_POST);
+
 			//check if email exist
 			if (!empty($user)) {
-				$errors['email'] = "Cet email existe déjà, voulez vous vous plutot connecter ?";
+				$errors['email'] = "Oups... Cet email existe déjà, voulez vous vous plutot connecter ?";
 			}
+
 			if ($_POST['password'] < 8 ) {
-				$errors['password'] = "Votre mot de passe doit contenir au moins 8 caractères";
+				$errors['password'] = "Humm... Mot de passe trop court, il faut au moins 8 caractères.";
 			}
 			//check if there is an error
 			if (count($errors) > 0) {
@@ -85,15 +87,23 @@
 		{
 			if (auth()->isAuthenticated()) {
 				$this->redirect('/');
-
 			}
+
+
 			$model = new UserModel();
 			$user = $model->findByEmail($_POST['email']);
+			$errors = $this->validForm($_POST);
+
+			//check if there is an error
+			if (count($errors) > 0) {
+				$_SESSION['error'] = $errors;
+				$this->redirect('/signUp');
+			}
 
 			// if the user is not found
 			if ($user === null) {
 				$_SESSION['error'] =  [
-					'email' => "Cet email n'existe pas, voulez vous vous plutot créer un compte ?"
+					'email' => "Oups .. Cet email n'existe pas! Voulez vous plutot créer un compte ?"
 				];
 				//redirect to the login page
 				$this->redirect('/logIn');
@@ -113,6 +123,7 @@
 				$this->redirect('/admin');
 
 			}
+
 
 			// if the user is found
 			auth()->logIn($user['id']);
@@ -143,10 +154,14 @@
 
 		public function validForm(array $data): array
 		{
+			$emailCheck = "/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix";
 			$errors = [];
 
 			if (empty($data['email'])) {
 				$errors['email'] = "L'email ne doit pas être vide";
+			}
+			if (!preg_match($emailCheck, $data['email'])) {
+				$errors['email'] = "Ha ! Cet email n'est pas valide pour moi !";
 			}
 
 			if (empty($data['password']) || strlen($data['password']) < 8) {
@@ -168,13 +183,15 @@
 			if (!auth()->isAuthenticated()) {
 				$this->redirect('/');
 			}
+
 			$model = new UserModel();
+
 			$user = $model->findById($_SESSION['user_id']);
 
 			$this->display('User/profile', [
 				'user' => $user]);
 
-			var_dump($user);
+
 
 			return $user;
 		}
@@ -197,11 +214,12 @@
 				'city' => $_POST['city'],
 				'codePostal' => $_POST['codePostal']
 			]);
-			//var_dump($user);
+
 			$this->redirect('/profile');
 
 
 		}
+
 		/**
 		 * method for display the edit password
 		 * @return void
@@ -214,32 +232,34 @@
 				$this->redirect('/');
 			}
 
-			// Récupération de l'id de l'utilisateur connecté
+
+			// get the user id
 			$auth = new Authenticate();
 			$userId = $auth->getId();
 
-			// Récupération des infos de l'utilisateur en base de données
+			// get all the user data
 			$model = new UserModel();
 			$user = $model->findById($userId);
 
-			// Vérification de l'ancien mot de passe
+			// check old password
 			if (!password_verify($_POST['passwordOld'], $user['password'])) {
 				$_SESSION['error'] = [
-					'password' => "Le mot de passe est incorrect"
+					'password' => "Le mot de passe est incorrect !"
 				];
 				if ($_POST['newPassword'] < 8) {
 					$_SESSION['error'] = [
-						'password' => "Le mot de passe doit être minimin 8 caractères"
+						'password' => "Le mot de passe doit être au minimum de 8 caractères !"
 					];
 				}
 
 				$this->redirect('/profile');
 			}
 
-			// Modification du mot de passe si l'ancien est correct
+
+			// change the password if the old one is correct
 			$model->updatePassword($userId, $_POST['newPassword']);
 
-			// Redirection
+
 			$this->redirect('/profile');
 		}
 
@@ -255,17 +275,20 @@
 			if (!auth()->isAuthenticated()) {
 				$this->redirect('/');
 			}
+
+
+			if (!isset($_POST['delete'])) {
+				$_SESSION['error'] = [
+					'delete' => "Vous devez cocher la case pour supprimer votre compte"
+				];
+				$this->redirect('/profile');
+			}
+
 			$auth = new Authenticate();
 			$userId = $auth->getId();
 
 			$model = new UserModel();
 			$model->findById($userId);
-
-			if (empty($_POST['DELETE'])) {
-				$_SESSION['error'] = [
-					'delete' => 'Pour supprime votre compte coche svp'
-				];
-			}
 
 			$auth->logOut();
 			$model->delete($userId);

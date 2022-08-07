@@ -1,4 +1,4 @@
-<p>panier</p>
+
 <?php if ($baskets): ?>
 
     <?php foreach ($baskets as $basket): ?>
@@ -28,7 +28,11 @@
 
 
 <?php else: ?>
-    <p>panier vide</p>
+    <div class="error">
+        <p>Oups ... mais il y a rien dans ton panier ... <i class="fa-solid fa-poo"></i></p>
+        <a href="<?= url('/') ?>" class="link">retourn</a>
+    </div>
+
 <?php endif; ?>
 
 

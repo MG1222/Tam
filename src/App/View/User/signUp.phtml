@@ -1,16 +1,32 @@
-<p>sign Up</p>
-<?php if (flashBag()->has('basketError')): ?>
-    <p><?= flashBag()->get('basketError') ?></p>
-<?php endif; ?>
-<form method="POST" action="<?= url('/user/store') ?>">
-    <input type="text" name="email" placeholder="email">
-    <?php if ( flashBag()->has('email')): ?>
-        <p><?= flashBag()->get('email') ?></p>
-    <?php endif; ?>
-    <!-- TODO: add a btn/icon for look psw -->
-    <input type="password" name="password" placeholder="password">
-    <?php if (flashBag()->has('password')): ?>
-        <p><?= flashBag()->get('password') ?></p>
-    <?php endif; ?>
-    <button type="submit">sign up</button>
-</form>
+<div class="user-connect">
+    <h2>CREÉR UN COMPTE </h2>
+
+    <form method="POST" action="<?= url('/user/store') ?>" class="user-form">
+
+        <div class="input-box">
+            <input type="text" name="email" placeholder="email" class="input">
+            <i class="fa-solid fa-at"></i>
+        </div>
+        <!--  if Errors -->
+        <div class="error">
+            <?php if (flashBag()->has('email')): ?>
+                    <p class="errors"><?= flashBag()->get('email') ?></p>
+                <?php endif; ?>
+        </div>
+
+        <div class="input-box">
+            <input type="password" name="password" placeholder="mot de passe" class="password input">
+            <i class="fa-solid fa-eye"></i>
+            <p class="hint">en moin 8 caractère </p>
+
+        </div>
+        <!-- if Errors -->
+        <div class="error">
+            <?php if (flashBag()->has('password')): ?>
+                <p class="errors"><?= flashBag()->get('password') ?></p>
+            <?php endif; ?>
+        </div>
+
+        <button type="submit" class="link">Creé mon compte</button>
+    </form>
+</div>

@@ -7,7 +7,11 @@
 
     <div class="btn-space">
         <form method="POST">
-            <input type="submit" value="Acheter" name="submit" class="link">
+			<?php if (!auth()->isAuthenticated()): ?>
+                <a href="<?= url('/signUp') ?> " class="link">Tu le veux ? alors connecte toi  </a>
+                <?php else: ?>
+                <input type="submit" value="Je le veux !" name="submit" class="link">
+			<?php endif; ?>
         </form>
         <a href="<?= url('/') ?>" class="link">retourn</a>
         <?php if (auth()->isAdmin()): ?>

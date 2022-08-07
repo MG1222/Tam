@@ -1,4 +1,4 @@
-$color-link: #8679ee;
+
 $transition: all 0.5s;
 
 .products {
@@ -44,39 +44,19 @@ $transition: all 0.5s;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
+  margin: 4rem;
   }
 
-.link {
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 3px;
-  color: $color-link;
-  display: block;
-  transition: $transition;
-  background: white;
-  border: none;
 
 
-    &:focus,
-    &:hover {
-      padding: 0.2rem;
-      background: white;
-      color: $color-link;
-      letter-spacing: 5px;
-      box-shadow: 18px 14px 0px 0px $color-link;
-      border: 1px solid $color-link;
-    }
-  }
-
-.btn-space{
+.btn-space {
   max-width: 15rem;
-  gap: 2.5rem;
   display: flex;
-  flex-direction: row;
+  gap: 2.5rem;
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
+  justify-content: center;
 
 }
 
