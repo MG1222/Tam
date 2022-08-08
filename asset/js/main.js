@@ -1,6 +1,6 @@
 import {dropDown} from "../js/dropDown.js";
 import {switchLogo} from "../js/logoswitch.js";
-import {iconSwitch, showHint, errorClick} from "../js/user.js";
+import {iconSwitch, showHint} from "../js/user.js";
 
 const main = () => {
     dropDown();
@@ -12,6 +12,29 @@ const main = () => {
 
 
 }
+
+const errorClick = () => {
+    const errorDiv = document.querySelectorAll('.errors');
+    const btn = document.querySelectorAll('.like-btn');
+
+
+    errorDiv.forEach(() => {
+
+        btn.forEach(() => {
+            for (let i = 0; i < btn.length; i++) {
+                btn[i].addEventListener('click', () => {
+                        errorDiv[i].style.display = 'none';
+                        console.log('click');
+                    }
+                )
+
+            }
+        })
+    });
+
+}
+
+
 
 
 

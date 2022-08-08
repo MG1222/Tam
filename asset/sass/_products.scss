@@ -1,20 +1,21 @@
 
 $transition: all 0.5s;
 
+
+
 .products {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
-
-
+}
     .product{
       box-shadow: 10px 16px 0 5px #000000;
       transition: $transition;
+      min-width: 21rem;
       max-width: 22rem;
-      height: 28rem;
+      height: 32rem;
       border: 2px solid black;
       display: flex;
       flex-direction: column;
@@ -29,11 +30,12 @@ $transition: all 0.5s;
 
     }
 
+
     .price {
       font-size: 2.2rem;
     }
 
-  }
+
 
 .product-show {
   width: 100%;
@@ -42,9 +44,7 @@ $transition: all 0.5s;
   flex-direction: column;
   align-items: center;
   margin: 4rem;
-  }
-
-
+}
 
 .btn-space {
   max-width: 15rem;

@@ -4,6 +4,7 @@ export const iconSwitch = () => {
 
     icon.addEventListener('click', () => {
 
+
        if (icon.classList.contains('fa-eye')) {
 
               icon.classList.remove('fa-eye');
@@ -35,25 +36,3 @@ export const showHint = () => {
 
 }
 
-export const errorClick = () => {
-    const errorDiv = document.querySelectorAll('.errors');
-    const btns = document.querySelectorAll('.like-btn');
-    console.log(errorDiv);
-    console.log(btns);
-    errorDiv.forEach(() => {
-
-        btns.forEach(() => {
-            for (let i = 0; i < btns.length; i++) {
-                btns[i].addEventListener('click', () => {
-                    errorDiv[i].style.display = 'none';
-                    }
-                )
-
-            }
-        })
-
-    });
-
-
-
-}

@@ -111,11 +111,13 @@
 
 		public function delete (int $id): ?int
 		{
+
+
 			$productId = $this->db->execute('DELETE FROM products WHERE id = :id', [
 				'id' => $id
 			]);
 
-			//if no product is created, return null
+			//if no product return null
 			if (empty($productId)) {
 				return null;
 			}

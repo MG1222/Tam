@@ -15,7 +15,11 @@
 			'App\controller\BasketController',
 			'addToBasket'
 		],
-
+		//edit product
+		'/product/edit' => [
+			'App\controller\ProductController',
+			'edit'
+		],
 		// product delete
 		'/product/delete' => [
 			'App\controller\ProductController',
@@ -28,8 +32,8 @@
 		],
 		// basket checkout
 		'/basket/checkout' => [
-			'App\controller\StripeController',
-			'index'
+			'App\controller\BasketController',
+			'checkout'
 		],
 		// basket delete
 		'/basket/deleteFromBasket' => [
@@ -41,8 +45,11 @@
 			'App\controller\AdminController',
 			'index'
 		],
+		'/edit' => [
+			'App\controller\AdminController',
+			'edit'
+		],
 		// users
-
 		'/signUp' => [
 			'App\Controller\UserController',
 			'signUp'

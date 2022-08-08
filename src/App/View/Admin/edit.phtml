@@ -1,0 +1,7 @@
+   <h2>Modifier <?= $product['name'] ?></h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="name" value="<?= htmlentities($product['name'] ?? '..') ?>">
+        <input type="text" name="description" placeholder="description" value="<?= htmlentities($product['description'] ?? '..') ?>">
+        <input type="text" name="price" placeholder="price" value="<?= htmlentities($product['price'] . '€' ?? '..') ?>">
+        <button type="submit" value="submit" class="link">Changer</button>
+    </form>

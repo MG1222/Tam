@@ -12,7 +12,7 @@
 			$fileName = str_replace('\\', '/', $className);
 			require "src/$fileName.php";
 		});
-		// if not Go index.php
+		//  if user try to access a page not authorized, he is redirected to the home page
 		$route = $_SERVER['PATH_INFO'] ?? '/';
 
 		$routes = require 'config/routes.php';
@@ -25,7 +25,7 @@
 					$controller->$method();
 				} else {
 					// if route is not a class
-					throw new NotFoundException("La route n'existe pas");
+					throw new NotFoundException("");
 				}
 
 		// if route not exist
@@ -38,8 +38,7 @@
 					http_response_code(500);
 				}
 
-	// Gestion de l'erreur
-	// Enregistrement dans un fichier de log : écriture dans un fichier log l'heure de l'erreur
+
 		file_put_contents('logs/application.log', date('d/m/Y H:i:s') . " : " . $e->getMessage() . "\n", FILE_APPEND);
 				echo $e->getMessage();
 				exit();

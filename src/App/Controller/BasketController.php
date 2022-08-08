@@ -5,6 +5,8 @@
 	use Library\Core\AbstractController;
 	use App\Model\ProductModel;
 	use App\Model\BasketModel;
+	use Stripe\Stripe;
+	use Stripe\Checkout\Session;
 
 
 	class BasketController extends AbstractController
@@ -41,8 +43,12 @@
 			return $totalPrice;
 		}
 
+
+
 		/**
 		 * @return void
+		 * method where we show the product
+		 * and user can add it to his basket
 		 */
 
 		public function addToBasket(): void
@@ -51,9 +57,9 @@
 			$id = $_GET['id'];
 			$product = $model->find($id);
 
-			//check if product exist
+			//check if product don't exist bc admin delete it in the same time
 			if (empty($product)) {
-				$errors['basketError'] = "Ce produit n'existe pas";
+				$errors['basketError'] = "OMG... Ce produit n'existe plus ";
 				if (count($errors) > 0) {
 					$_SESSION['error'] = $errors;
 					$this->redirect('/');
@@ -73,7 +79,6 @@
 
 			}
 
-			//var_dump($product);
 
 			$this->display('Product/productOne', [
 				'product' => $product
@@ -82,19 +87,52 @@
 
 		}
 
+		/**
+		 * @throws \Stripe\Exception\ApiErrorException
+		 */
 		public function checkout(): void
 		{
-            // 1. Retrieve the basket to checkout
-            // 2. Retrieve products contained within the basket from SQL DB
-            // (Optional: retrieve "stripe information" from stripe_product_id" and check if product is "active")
-            // 3. Create a "stripe payment" with stripe_product_id
-            // 4. Open "stripe page" with payment information
-			$stripe = new \Stripe\StripeClient(
-				$this->getConfig()['stripe']['key'],
-				$this->getConfig()['stripe']['keySecret']
-			);
+			$key = require_once 'config/stripe.php';
+			require_once 'vendor/autoload.php';
+
+			\Stripe\Stripe::setApiKey($key['STRIPE_SECRET_KEY']);
+
+			$userId = auth()->getId();
+			$model = new BasketModel();
+			$baskets = $model->getBasket($userId);
 
 
+			$session = Session::create([
+
+				'line_items' => [
+					array_map(fn(array $baskets) => [
+						'quantity'   => 1,
+						'price_data' => [
+							'currency'     => 'EUR',
+							'product_data' => [
+								'name' => $baskets['name']
+							],
+							'unit_amount'  => $baskets['price'] * 100,
+						]
+					], $baskets)
+				],
+				'mode'                        => 'payment',
+				'success_url'                 => 'http://localhost/project/index.php/basket',
+				'cancel_url'                  => 'http://localhost/project/index.php/basket',
+				'billing_address_collection'  => 'required',
+				'shipping_address_collection' => [
+					'allowed_countries' => ['FR']
+				],
+				'metadata'                    => [
+					'cart_id' => $baskets[0]['id']
+				]
+
+			]);
+			$model->deleteAll($userId);
+
+			header("HTTP/1.1 303 See Other");
+			header("Location: " . $session->url);
+			exit;
 
 		}
 

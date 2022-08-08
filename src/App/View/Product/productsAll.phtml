@@ -1,3 +1,26 @@
+<?php if (flashBag()->has('basketError')): ?>
+    <div class="errors">
+        <div class="error-header">
+            <div class="like-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <p class="error"><?= flashBag()->get('basketError') ?></p>
+    </div>
+<?php endif; ?>
+
+<?php if (flashBag()->has('error')): ?>
+    <div class="errors">
+        <div class="error-header">
+            <div class="like-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <p class="error"><?= flashBag()->get('error') ?></p>
+    </div>
+<?php endif; ?>
+
+
 <div class="products">
     <?php foreach ($products as $product) : ?>
         <div class="product">
@@ -8,11 +31,10 @@
 
             <div class="info-product">
                 <p class="price">  <?= $product['price'] ?> € </p>
-
                 <a href="<?= url('/product/show?id=' . $product['id']) ?>" class="link">Info </a>
                 <?php if (auth()->isAdmin()): ?>
                     <a href="<?= url('/product/delete?id=' . $product['id']) ?>" class="link">Supprimer le produit</a>
-                    <a href="<?= url('/product/edit/' . $product['id']) ?>" class="link">edit</a>
+                    <a href="<?= url('/edit?id=' . $product['id']) ?>" class="link">Edit</a>
                 <?php endif; ?>
             </div>
         </div>

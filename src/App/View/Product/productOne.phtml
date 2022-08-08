@@ -1,5 +1,5 @@
-<div class="product product-show">
-    <img src="<?= url('../../asset/img/products/' . $product['img']) ?>" alt="img" width="100px" height="100px">
+<div class="product-show">
+    <img src="<?= url('../../asset/img/products/' . $product['img']) ?>" alt="img" width="200px" height="200px">
 
     <h2><?= $product['name'] ?></h2>
     <p><?= $product['description'] ?></p>
@@ -16,7 +16,7 @@
         <a href="<?= url('/') ?>" class="link">retourn</a>
         <?php if (auth()->isAdmin()): ?>
             <a href="<?= url('/product/delete?id=' . $product['id']) ?>" class="link">Supprimer le produit</a>
-            <a href="<?= url('/product/edit/' . $product['id']) ?>" class="link">edit</a>
+            <a href="<?= url('/edit?id=' .$product['id']) ?>" class="link">Edit</a>
 		<?php endif; ?>
     </div>
 

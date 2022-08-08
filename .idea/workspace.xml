@@ -5,19 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3e1f541-de65-4085-b8a1-41ff36614132" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/asset/img/products/62f00a03b4097.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/img/products/62f00a38e0d19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/img/products/62f0131a0caa6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/img/products/62f013444eac5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/img/products/62f0142c5da39.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/img/products/62f0149fc071f.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/img/products/62f014eb2ae3c.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/asset/sass/_basket.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App/View/Admin/edit.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/sass/_user.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/_user.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/sass/_products.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/_products.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/asset/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/stripe.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/stripe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controller/BasketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controller/BasketController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Controller/StripeController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Model/BasketModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Model/BasketModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Model/ProductModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Model/ProductModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/Admin/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Admin/index.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/View/Basket/basket.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Basket/basket.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/View/User/logIn.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/logIn.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/View/User/profile.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/profile.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/View/User/signUp.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/User/signUp.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/Product/productOne.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Product/productOne.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/View/Product/productsAll.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/View/Product/productsAll.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Core/AbstractController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Core/AbstractController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +59,16 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2CvUVsqh5W2swaUdTVPJYuppkro" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -77,7 +99,9 @@
       <workItem from="1659732279332" duration="4872000" />
       <workItem from="1659767485260" duration="20187000" />
       <workItem from="1659855033014" duration="2868000" />
-      <workItem from="1659875428457" duration="7816000" />
+      <workItem from="1659875428457" duration="11673000" />
+      <workItem from="1659893261801" duration="2850000" />
+      <workItem from="1659900362470" duration="15411000" />
     </task>
     <servers />
   </component>
@@ -94,5 +118,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 @use "navBar";
 @use "products";
 @use "user";
+@use "basket";
 @use "footer";
 
 
@@ -56,9 +57,10 @@ html {
     border-right: 2px solid black;
 
 
-
-
   }
+
+
+
 
   .link {
     text-transform: uppercase;

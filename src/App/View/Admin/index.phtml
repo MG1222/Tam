@@ -1,11 +1,14 @@
-<h2>Hello Boss </h2>
 
+<div class="admin-creates-product">
+    <h2>Hello Boss ! </h2>
+    <p>On peut crée un nouveu Tam ? </p>
+    <form method="POST" action="<?= url('/product/store') ?>" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="description" placeholder="description">
+        <input type="text" name="price" placeholder="price">
+        <input type="file" name="img">
+        <button type="submit" value="submit" class="link">Envoyer</button>
+    </form>
 
-<form method="POST" action="<?= url('/product/store') ?>" enctype="multipart/form-data">
-    <input type="text" name="name" placeholder="name">
-    <input type="text" name="description" placeholder="description">
-    <input type="text" name="price" placeholder="price">
-    <input type="file" name="img" >
-    <button type="submit" value="submit">send</button>
-</form>
+</div>
 

@@ -140,3 +140,76 @@
 07/08/2022 14:22:51 : La route n'existe pas
 07/08/2022 14:22:59 : La route n'existe pas
 07/08/2022 14:58:15 : La route n'existe pas
+07/08/2022 15:21:26 : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`tam`.`basket`, CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`))
+07/08/2022 15:22:33 : La route n'existe pas
+07/08/2022 15:23:01 : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`tam`.`basket`, CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`))
+07/08/2022 15:23:11 : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`tam`.`basket`, CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`))
+07/08/2022 15:30:00 : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`tam`.`basket`, CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`))
+07/08/2022 15:36:05 : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`tam`.`basket`, CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`))
+07/08/2022 15:45:14 : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`tam`.`basket`, CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`))
+07/08/2022 15:45:20 : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`tam`.`basket`, CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`))
+07/08/2022 16:05:15 : La route n'existe pas
+07/08/2022 18:52:51 : La route n'existe pas
+07/08/2022 18:53:53 : La route n'existe pas
+07/08/2022 19:14:58 : La route n'existe pas
+07/08/2022 19:15:03 : La route n'existe pas
+07/08/2022 19:15:23 : La route n'existe pas
+07/08/2022 19:16:11 : La route n'existe pas
+07/08/2022 19:20:08 : La route n'existe pas
+07/08/2022 19:20:14 : La route n'existe pas
+07/08/2022 19:21:53 : SQLSTATE[HY000] [2002] Connection refused
+07/08/2022 19:23:22 : SQLSTATE[HY000] [2002] Connection refused
+07/08/2022 19:24:03 : La route n'existe pas
+07/08/2022 19:25:00 : La route n'existe pas
+07/08/2022 19:26:24 : La route n'existe pas
+07/08/2022 19:26:40 : La route n'existe pas
+07/08/2022 19:27:33 : La route n'existe pas
+07/08/2022 19:42:50 : La route n'existe pas
+07/08/2022 19:45:13 : La route n'existe pas
+07/08/2022 19:49:53 : La route n'existe pas
+07/08/2022 19:50:37 : La route n'existe pas
+07/08/2022 19:51:05 : La route n'existe pas
+07/08/2022 19:52:19 : La route n'existe pas
+07/08/2022 19:52:51 : La route n'existe pas
+07/08/2022 19:53:03 : La route n'existe pas
+07/08/2022 19:55:01 : La route n'existe pas
+07/08/2022 19:55:08 : La route n'existe pas
+07/08/2022 19:55:49 : La route n'existe pas
+07/08/2022 19:57:51 : La route n'existe pas
+07/08/2022 20:03:39 : La route n'existe pas
+07/08/2022 20:05:47 : La route n'existe pas
+07/08/2022 20:06:57 : La route n'existe pas
+07/08/2022 20:09:50 : La route n'existe pas
+07/08/2022 20:44:34 : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+07/08/2022 20:45:16 : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+07/08/2022 20:45:18 : La route n'existe pas
+07/08/2022 20:45:20 : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+07/08/2022 20:45:45 : SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'img' cannot be null
+07/08/2022 20:47:45 : La route n'existe pas
+07/08/2022 20:48:10 : La route n'existe pas
+07/08/2022 21:37:02 : Charge ch_3LT7iiB3dtYEA9zh0hatwtcP has already been captured.
+07/08/2022 21:37:20 : Charge ch_3LT7iiB3dtYEA9zh0hatwtcP has already been captured.
+07/08/2022 21:37:28 : Charge ch_3LT7iiB3dtYEA9zh0hatwtcP has already been captured.
+07/08/2022 21:52:13 : No API key provided.  (HINT: set your API key using "Stripe::setApiKey(<API-KEY>)".  You can generate API keys from the Stripe web interface.  See https://stripe.com/api for details, or email support@stripe.com if you have any questions.
+07/08/2022 21:52:45 : You cannot use `line_items.amount`, `line_items.currency`, `line_items.name`, `line_items.description`, or `line_items.images` in this API version. Please use `line_items.price` or `line_items.price_data`.
+07/08/2022 21:54:03 : You cannot use `line_items.amount`, `line_items.currency`, `line_items.name`, `line_items.description`, or `line_items.images` in this API version. Please use `line_items.price` or `line_items.price_data`.
+07/08/2022 21:55:28 : Received unknown parameters: price_data.currency, price_data.product_data.name, price_data.product_data.description, price_data.product_data.images, price_data.unit_amount. Did you mean price_data?
+07/08/2022 21:55:59 : Received unknown parameters: price_data.product_data.name, price_data.product_data.description, price_data.product_data.images, price_data.unit_amount
+07/08/2022 21:57:46 : Received unknown parameter: line_items[0][price_data.unit_amount]
+07/08/2022 21:58:15 : You may only specify one of these parameters: name, price_data.
+07/08/2022 21:58:41 : Received unknown parameter: line_items[0][total]
+07/08/2022 21:59:46 : Received unknown parameter: line_items[0][total]
+07/08/2022 21:59:51 : Received unknown parameter: line_items[0][total]
+07/08/2022 22:03:54 : Missing required param: success_url.
+07/08/2022 22:04:59 : Missing required param: success_url.
+07/08/2022 22:05:25 : Missing required param: success_url.
+07/08/2022 22:05:40 : Missing required param: success_url.
+07/08/2022 22:12:27 : Missing required param: success_url.
+07/08/2022 22:15:50 : Missing required param: success_url.
+07/08/2022 22:16:15 : Missing required param: success_url.
+07/08/2022 22:59:52 : SQLSTATE[HY000] [2002] Connection refused
+07/08/2022 23:01:04 : La route n'existe pas
+08/08/2022 00:00:27 : La route n'existe pas
+08/08/2022 00:01:32 : 
+08/08/2022 00:02:01 : 
+08/08/2022 00:02:18 : 

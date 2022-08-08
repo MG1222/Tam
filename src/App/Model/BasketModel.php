@@ -28,13 +28,30 @@
 
 				]);
 
-			 //var_dump($basket);
+
 			if (empty($basket)) {
 				return null;
 			}
 
 			return $basket;
 		}
+
+		public function getBasketAdmin(int $id): ?array
+		{
+			$basket = $this->db->getResults(
+				sql: 'SELECT * FROM products LEFT JOIN basket ON products.id=basket.product_id WHERE basket.product_id = :id', parameters: [
+				'id' => $id
+
+			]);
+
+
+			if (empty($basket)) {
+				return null;
+			}
+
+			return $basket;
+		}
+
 
 		public function delete(int $id): ?string
 		{
@@ -49,20 +66,18 @@
 			return $basketId;
 		}
 
+public function deleteAll(int $user_id): ?string
+		{
+			$basketId = $this->db->execute('DELETE FROM basket WHERE user_id = :user_id', [
+				'user_id' => $user_id
+			]);
 
-
-
-
-
-
-
-
-		//TODO how to make basket in php
-		//todo step 1 create  table basket ? witd id user_id and product_id ?
-		//todo step 2 if user not log he can't use basket
-		//todo each user have 1 basket
-		// todo user can modifie basket
-		//todo step 3 if address is ok he can pay via stripe ?
+			//if no basket is created, return null
+			if (empty($basketId)) {
+				return null;
+			}
+			return $basketId;
+		}
 
 
 	}

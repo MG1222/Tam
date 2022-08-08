@@ -1,53 +1,55 @@
+
+<?php if (flashBag()->has('basketError')): ?>
     <div class="errors">
         <div class="error-header">
             <div class="like-btn">
                 <i class="fa-solid fa-xmark"></i>
             </div>
         </div>
-        <?php if (flashBag()->has('basketError')): ?>
             <p class="error"><?= flashBag()->get('basketError') ?></p>
-        <?php endif; ?>
     </div>
-<?php if ($baskets): ?>
+<?php endif; ?>
+<h2>Votre panier</h2>
+<div class="baskets"><p>
 
-    <?php foreach ($baskets as $basket): ?>
-    <p>
-        <?= $basket['product_id'] ?>
-        <?= $basket['name'] ?>
-        <?= $basket['quantity'] ?>
-		<p><?= $basket['price'] ?>$</p>
-
-        <img src="<?= url('../../asset/img/products/' . $basket['img']) ?>" alt="img" width="50px" height="50px">
-
-    </p>
-
-    <form action="<?= url('/basket/deleteFromBasket') ?>" method="GET">
-        <input type="hidden" name="id" value="<?= $basket['id'] ?>">
-        <input type="submit" value="delete">
-    </form>
-
-<?php endforeach; ?>
-    <hr>
-    <p>total : <?= $totalPrice ?>$</p>
-    <a href="<?= url('/') ?>">retourn</a>
-
+    <?php if ($baskets): ?>
+    <p>TOTAL : <?= $totalPrice ?>€</p>
     <form action="<?= url('/basket/checkout') ?>" method="GET">
-        <input type="submit" value="checkout">
+        <input type="submit" value="checkout" class="link">
     </form>
+    <div class="basket">
 
+        <?php foreach ($baskets as $basket): ?>
+            <div class="basket-item">
+                <img src="<?= url('../../asset/img/products/' . $basket['img']) ?>" alt="img" width="100px" height="100px">
+                <p><?= $basket['name'] ?></p>
+                <p><?= $basket['price'] ?>$</p>
+                <form action="<?= url('/basket/deleteFromBasket') ?>" method="GET">
+                        <input type="hidden" name="id" value="<?= $basket['id'] ?>">
+                        <input type="submit" value="delete" class="link">
+                    </form>
+
+            </div>
+        <?php endforeach; ?>
+</div>
+
+
+
+
+</div>
 
 <?php else: ?>
+
     <div class="errors">
         <div class="error-header">
-            <div class="like-btn">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
         </div>
         <p class="error">Oups ... mais il y a rien dans ton panier ... <i class="fa-solid fa-poo"></i></p>
-        <a href="<?= url('/') ?>" class="link">retourn</a>
     </div>
 
 <?php endif; ?>
+<a href="<?= url('/') ?>" class="link">retourn</a>
+
+
 
 
 

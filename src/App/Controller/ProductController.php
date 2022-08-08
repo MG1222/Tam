@@ -54,7 +54,7 @@
 						'price' => $_POST['price'],
 						'img' => $fileName . '.' . $extension
 						]);
-				$this->redirect('/productsAll');
+				$this->redirect('/');
 			}
 
 		}
@@ -69,29 +69,64 @@
 		{
 			$model = new ProductModel();
 			$products = $model->getAll();
+
 			$this->display('Product/productsAll', [
 				'products' => $products
 			]);
 		}
 
+		/**
+		 * @var ProductModel
+		 * method for edit a product only admin can do it
+		 * @return void
+		 */
 
-		public function showOne(): void
+		public function edit(): void
 		{
-			$model = new ProductModel();
-			$id = $_GET['id'];
-			$product = $model->find($id);
-
-
-			if (empty($product)) {
-				throw new NotFoundException('Product not found');
+			if (!auth()->isAdmin()) {
+				$this->redirect('/');
 			}
-			//var_dump($product);
+			$model = new ProductModel();
+			$product = $model->find($_GET['id']);
 
-			$this->display('Product/productOne', [
-				'product' => $product
-			]);
+
+
+
 
 		}
+
+		/**
+		 * @var ProductModel
+		 * @var Authenticate
+		 * method for delete a product only admin can do it
+		 */
+		public function delete(): void
+		{
+			if (!auth()->isAdmin()) {
+				$this->redirect('/');
+			}
+
+			$basket = new BasketModel();
+			$idProduct = $_GET['id'];
+			$inBasket = $basket->getBasketAdmin($idProduct);
+
+			if ($inBasket) {
+				$errors['error'] = "Ce produit est dans un panier, vous ne pouvez pas le supprimer ! Contactez le utilisateur qui a commandé ce produit";
+				if (count($errors) > 0) {
+					$_SESSION['error'] = $errors;
+					$this->redirect('/');
+
+				}
+			}
+
+			$model = new ProductModel();
+			 $model->delete($idProduct);
+			$this->redirect('/');
+
+
+		}
+
+
 
 
 
