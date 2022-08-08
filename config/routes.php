@@ -35,6 +35,10 @@
 			'App\controller\BasketController',
 			'checkout'
 		],
+		'/basket/bravo' => [
+			'App\controller\BasketController',
+			'bravo'
+		],
 		// basket delete
 		'/basket/deleteFromBasket' => [
 			'App\controller\BasketController',

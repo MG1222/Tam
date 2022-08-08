@@ -213,3 +213,8 @@
 08/08/2022 00:01:32 : 
 08/08/2022 00:02:01 : 
 08/08/2022 00:02:18 : 
+08/08/2022 07:23:16 : 
+08/08/2022 07:25:22 : SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`tam`.`basket`, CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+08/08/2022 07:57:46 : Could not determine which URL to request: Stripe\Checkout\Session instance has invalid ID: 
+08/08/2022 07:58:04 : Could not determine which URL to request: Stripe\Checkout\Session instance has invalid ID: 
+08/08/2022 07:58:25 : Could not determine which URL to request: Stripe\Checkout\Session instance has invalid ID: 

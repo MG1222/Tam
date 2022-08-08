@@ -89,6 +89,11 @@
 
 		/**
 		 * @throws \Stripe\Exception\ApiErrorException
+		 * @return void
+		 * method where we checkout the basket
+		 * and we send the user to the payment page
+		 * and we send the user to the bravo page
+		 *
 		 */
 		public function checkout(): void
 		{
@@ -117,7 +122,7 @@
 					], $baskets)
 				],
 				'mode'                        => 'payment',
-				'success_url'                 => 'http://localhost/project/index.php/basket',
+				'success_url'                 => 'http://localhost/project/index.php/basket/bravo',
 				'cancel_url'                  => 'http://localhost/project/index.php/basket',
 				'billing_address_collection'  => 'required',
 				'shipping_address_collection' => [
@@ -128,7 +133,6 @@
 				]
 
 			]);
-			$model->deleteAll($userId);
 
 			header("HTTP/1.1 303 See Other");
 			header("Location: " . $session->url);
@@ -136,9 +140,29 @@
 
 		}
 
+		/**
+		 * @return void
+		 */
+		public function bravo(): void
+		{
+			if (auth()->isAuthenticated()) {
+				$userId = auth()->getId();
+				$model = new BasketModel();
+				$baskets = $model->getBasket($userId);
+					if ($baskets) {
+						$model->deleteAll($userId);
+						$this->display('Basket/bravo');
+					}
+			} else {
+				$this->redirect('/');
+			}
+
+		}
+
 
 		/**
 		 * @return void
+		 * method user can delete product from his basket
 		 */
 
 		public function deleteFromBasket(): void
@@ -149,10 +173,7 @@
 			$this->redirect('/basket');
 		}
 
-		private function getConfig()
-		{
 
-		}
 
 
 	}

@@ -1,38 +1,47 @@
 export const iconSwitch = () => {
     const icon = document.querySelector('.fa-eye');
     const input = document.querySelector('.password');
+    if (icon !== null) {
 
-    icon.addEventListener('click', () => {
+        icon.addEventListener('click', () => {
 
 
-       if (icon.classList.contains('fa-eye')) {
+           if (icon.classList.contains('fa-eye')) {
 
-              icon.classList.remove('fa-eye');
-              icon.classList.add('fa-eye-slash');
-              input.type = 'text';
-        }
-         else {
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
-                input.type = 'password';
-             }
+                  icon.classList.remove('fa-eye');
+                  icon.classList.add('fa-eye-slash');
+                  input.type = 'text';
+            }
+             else {
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                    input.type = 'password';
+                 }
 
-        });
+            });
 
     }
+    else {
+        console.log('icon not found');
+    }
+}
 
 export const showHint = () => {
-    setTimeout(() => {
-        const input = document.querySelector('.password');
-        input.placeholder = 'en moins de 8 caractères';
+    const input = document.querySelector('.password');
+    if (input !== null) {
 
-    }
-    , 1000);
+        setTimeout(() => {
+                input.placeholder = 'en moins de 8 caractères';
 
-    setTimeout(() => {
-            const input = document.querySelector('.password');
+            }
+            , 1000);
+
+        setTimeout(() => {
             input.placeholder = 'mot de passe';
         }, 4000);
-
+    }
+    else {
+        console.log('input not found');
+    }
 }
 

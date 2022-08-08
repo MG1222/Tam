@@ -17,21 +17,27 @@ const errorClick = () => {
     const errorDiv = document.querySelectorAll('.errors');
     const btn = document.querySelectorAll('.like-btn');
 
+    console.log(btn);
+    console.log(errorDiv);
+    if (errorDiv !== null) {
 
-    errorDiv.forEach(() => {
+        errorDiv.forEach(() => {
 
-        btn.forEach(() => {
-            for (let i = 0; i < btn.length; i++) {
-                btn[i].addEventListener('click', () => {
-                        errorDiv[i].style.display = 'none';
-                        console.log('click');
-                    }
-                )
+            btn.forEach(() => {
+                for (let i = 0; i < btn.length; i++) {
+                    btn[i].addEventListener('click', () => {
+                            errorDiv[i].style.display = 'none';
+                        }
+                    )
 
-            }
-        })
-    });
+                }
+            })
+        });
 
+    }
+    else {
+        console.log('error not found');
+    }
 }
 
 
