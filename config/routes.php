@@ -7,50 +7,50 @@
 		],
 		// products
 		'/product/store' => [
-			'App\controller\ProductController',
+			'App\Controller\ProductController',
 			'store'
 		],
 		// show product possible to add to basket
 		'/product/show' => [
-			'App\controller\BasketController',
+			'App\Controller\BasketController',
 			'addToBasket'
 		],
 		//edit product
 		'/product/edit' => [
-			'App\controller\ProductController',
+			'App\Controller\ProductController',
 			'edit'
 		],
 		// product delete
 		'/product/delete' => [
-			'App\controller\ProductController',
+			'App\Controller\ProductController',
 			'delete'
 		],
 		// basket
 		'/basket' => [
-			'App\controller\BasketController',
+			'App\Controller\BasketController',
 			'index'
 		],
 		// basket checkout
 		'/basket/checkout' => [
-			'App\controller\BasketController',
+			'App\Controller\BasketController',
 			'checkout'
 		],
 		'/basket/bravo' => [
-			'App\controller\BasketController',
+			'App\Controller\BasketController',
 			'bravo'
 		],
 		// basket delete
 		'/basket/deleteFromBasket' => [
-			'App\controller\BasketController',
+			'App\Controller\BasketController',
 			'deleteFromBasket'
 		],
 		//admin
 		'/admin' => [
-			'App\controller\AdminController',
+			'App\Controller\AdminController',
 			'index'
 		],
 		'/edit' => [
-			'App\controller\AdminController',
+			'App\Controller\AdminController',
 			'edit'
 		],
 		// users
