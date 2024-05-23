@@ -55,14 +55,15 @@ Ce projet est une plateforme e-commerce développée en PHP. Elle inclut les op�
 
 4. **Configurer les variables d'environnement**
 
-   Renommez le fichier `.env.example` en `.env` et mettez à jour les paramètres de configuration de la base de données et de Stripe.
+   Renommez le fichier `database.php`, `stripe` en `config` et mettez à jour les paramètres de configuration de la base de données et de Stripe .
 
    ```plaintext
    DB_HOST=localhost
    DB_NAME=ecommerce
    DB_USER=root
    DB_PASS=motdepasse
-
+   ```
+    ```plaintext
    STRIPE_PUBLIC_KEY=cle_publique_stripe
    STRIPE_SECRET_KEY=cle_secrete_stripe
    ```
