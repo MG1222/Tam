@@ -1,5 +1,5 @@
 # Tamagotchi
-## E-commerce de [Tamagotchi](https://www.google.com)
+## E-commerce de [Tamagotchi](https://margadgantuya.sites.3wa.io/project/index.php/)
 
 Sur mon site on peut :
 - Se Connecter/S’inscre.
