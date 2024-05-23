@@ -1,8 +1,6 @@
 # Tamagotchi
 ## E-commerce de [Tamagotchi](https://margadgantuya.sites.3wa.io/project/index.php/)
 
-# Plateforme E-Commerce
-
 ## Introduction
 
 Ce projet est une plateforme e-commerce développée en PHP. Elle inclut les opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) de base et intègre Stripe pour le traitement des paiements. L'application permet aux utilisateurs de parcourir les produits, de les ajouter au panier et de faire des achats. De plus, elle possède un panneau d'administration pour la gestion des produits et des commandes.
