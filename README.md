@@ -1,5 +1,5 @@
 # Tamagotchi
-## E-commerce de Tamagotchi 
+## E-commerce de [Tamagotchi](https://www.google.com)
 
 Sur mon site on peut :
 - Se Connecter/S’inscre.
